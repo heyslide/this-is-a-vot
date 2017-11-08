@@ -24,6 +24,6 @@ while True:
     tweet_text = lyrics.getline(gottenline)
     if len(tweet_text) <= 140 and tweet_text != '\n':
 	       api.update_status(status=tweet_text)
-	       print(tweet_text)
+	       print tweet_text
            secondsSleeping = randint(3600*3+14*60, 3600*6+28*60)
 	       time.sleep(secondsSleeping)
