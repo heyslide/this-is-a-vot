@@ -19,11 +19,11 @@ lastline = 0
 while True:
     gottenline = randint(1, lines)
     while gottenline == lastline:
-	       gottenline = randint(1, lines)
+        gottenline = randint(1, lines)
     lastline = gottenline
+    secondsSleeping = randint(3600*3+14*60, 3600*6+28*60)
     tweet_text = lyrics.getline(gottenline)
     if len(tweet_text) <= 140 and tweet_text != '\n':
-	       api.update_status(status=tweet_text)
-	       print tweet_text
-           secondsSleeping = randint(3600*3+14*60, 3600*6+28*60)
-	       time.sleep(secondsSleeping)
+        api.update_status(status=tweet_text)
+        print tweet_text
+        time.sleep(secondsSleeping)
